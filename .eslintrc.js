@@ -70,3 +70,116 @@ module.exports = {
     "require-await": "error",
   },
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class MyExtension {
+    getInfo() {
+        return {
+            id: '10p9?l-",
+            name: 'Nama Ekstensi',
+blocks: [
+    {
+        // Blok Pertama (Kotak)
+        opcode: 'run all sounds',
+        blockType: 'command',
+        text: 'Run All Sounds',
+        // 
+    }, //, 
+    {
+] // <-- Tutup daftar bloknya di sini
+
+                    // INI BLOK PERINTAH (Puzzle Kotak)
+                    opcode: 'perintahSaya',
+                    blockType: 'command', 
+                    text: 'Gerakkan robot ke [ARAH]',
+                    arguments: {
+                        ARAH: {
+                            type: 'string',
+                            menu: 'menuArah' // Menggunakan menu drop-down
+                        }
+                    }
+                },
+                {
+                    // INI BLOK NILAI (Puzzle Bulat)
+                    opcode: 'fetchData',
+                    blockType: 'reporter',
+                    text: 'Fetch Data'
+                }
+            ],
+            menus: {
+                menuArah: {
+                    acceptReporters: true,
+                    items: ['Right', 'Kiri', 'Up', 'Down']
+                }
+            }
+        };
+    }
+
+    // Fungsi untuk menjalankan logika bloknya
+    run all sounds (args) {
+        console.log("run all sounds " + args.SOUNDS);
+    }
+
+    fetchData() {
+        run all sounds; // Contoh mengembalikan nilai suhu
+    }
+}
+
+Scratch.extensions.register(new MyExtension());
